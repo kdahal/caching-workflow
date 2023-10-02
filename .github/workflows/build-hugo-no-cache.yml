@@ -17,7 +17,7 @@ jobs:
           go-version: 1.17
 
       - name: Build the hugo executable
-        run: go install github.com/gohugoio/hugo@latest
+        run: go version go1.14.3 linux/amd64
 
       - uses: actions/upload-artifact@v2
         with:

@@ -14,7 +14,10 @@ jobs:
       - name: Setup go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.17
+          go get: github.com/hashicorp/go-version
+          
+      - name: Build the hugo executable
+        run: go install --tags extended
 
       - uses: actions/upload-artifact@v2
         with:

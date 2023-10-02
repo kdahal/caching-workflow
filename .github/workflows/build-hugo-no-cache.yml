@@ -17,7 +17,7 @@ jobs:
           go-version: 1.17
 
       - name: Build the hugo executable
-        run: go install --tags extended
+        run: CGO_ENABLED=1 go install --tags extended
 
       - uses: actions/upload-artifact@v2
         with:
